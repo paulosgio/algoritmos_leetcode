@@ -1,4 +1,4 @@
-class ListNode {
+/* class ListNode {
     value: number
     next: ListNode | null
     constructor(value: number, next: ListNode | null = null) {
@@ -19,4 +19,4 @@ const node3 = new ListNode(3, node4);
 const node2 = new ListNode(2,node3)
 const node1 = new ListNode(1, node2)
 const head = node1
-console.log(midleLinkedList(head))
+console.log(midleLinkedList(head)) */

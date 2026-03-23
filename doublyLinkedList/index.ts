@@ -1,4 +1,4 @@
-class node {
+/* class node {
     value: number
     next: node | null
     prev: node | null
@@ -68,4 +68,4 @@ list.addToEnd(5)
 list.addToEnd(6)
 console.log(list.removeToHead())
 console.log(list.removeToTail())
-console.log(list)
+console.log(list) */
