@@ -1,4 +1,4 @@
-class ListNode {
+/* class ListNode {
     value: number
     next: ListNode | null
     constructor(value: number, next: ListNode | null = null) {
@@ -6,27 +6,24 @@ class ListNode {
         this.next = next
     }
 }
-function mergeLinkedList(list1: ListNode, list2: ListNode): ListNode | null {
-    let h: ListNode = list1
-    let nn: ListNode | null = h.next
-    while (h && nn) {
-        h = nn
-        nn = h.next
-        if (!h.next && list2) {
-            h.next = list2
+function mergeLinkedList(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+    let dummy: ListNode = new ListNode(0)
+    let curr: ListNode = dummy
+    while (list1 && list2) {
+        if (list1.value < list2.value) {
+            curr.next = list1
+            list1 = list1.next
+        } else {
+            curr.next = list2
+            list2 = list2.next
         }
+        curr = curr.next
     }
-    if (list1.value === null && list1.next === null) {
-        return list2
-    } else if (list2.value === null && list2.next === null) {
-        return list1
-    }
-    return list1
+    curr.next = list1 || list2
+    return dummy.next
 }
 const head = new ListNode(null)
-const node4Again = new ListNode(4)
-const node3 = new ListNode(3, node4Again)
-const headAgain = new ListNode(1, node3)
+const headAgain = new ListNode(0)
 console.log(mergeLinkedList(head, headAgain))
 
-//falta so ordenar agora
+//falta so ordenar agora */
